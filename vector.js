@@ -14,6 +14,28 @@ class Vector {
     else return new Vector(this.x + v, this.y + v, this.z + v);
   }
   
+  addX(x) {
+    this.x += x;
+    return this;
+  }
+  
+  addY(y) {
+    this.y += y;
+    return this;
+  }
+  
+  addZ(z) {
+    this.z += z;
+    return this;
+  }
+  
+  addScalar(scalar) {
+	this.x += scalar;
+	this.y += scalar;
+	this.z += scalar;
+	return this;
+  };
+  
   subtract(v) {
     if (v instanceof Vector) return new Vector(this.x - v.x, this.y - v.y, this.z - v.z);
     else return new Vector(this.x - v, this.y - v, this.z - v);
